@@ -8,6 +8,7 @@ import time
 import pyautogui
 import pyjokes
 import pywhatkit
+import subprocess
 
 
 engine = pyttsx3.init()
@@ -90,6 +91,34 @@ def main():
         elif 'open google' in command:
             speak("Opening Google")
             webbrowser.open("google.com")
+
+        elif 'open notepad' in command:
+            speak("Opening Notepad")
+            subprocess.Popen(["notepad.exe"])
+
+        elif 'open amazon' in command:
+            speak("Opening Amazon")
+            webbrowser.open("amazon.in")
+
+        elif 'open flipkart' in command:
+            speak("Opening Flipkart")
+            webbrowser.open("flipkart.com")
+
+        elif 'open facebook' in command:
+            speak("Opening Facebook")
+            webbrowser.open("facebook.com")
+
+        elif 'open instagram' in command:
+            speak("Opening Instagram")
+            webbrowser.open("instagram.com")
+
+        elif 'open stackoverflow' in command:
+            speak("Opening Stack Overflow")
+            webbrowser.open("stackoverflow.com")
+        
+        elif 'open stack overflow' in command:
+            speak("Opening Stack Overflow")
+            webbrowser.open("stackoverflow.com")
 
         elif 'play' in command:
             song = command.replace('play', '')
